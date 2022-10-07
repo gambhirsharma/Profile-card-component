@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* colors */
+:root {
+  --prim-cyan: hsl(185, 75%, 39%);
+  --prim-blue: hsl(229, 23%, 23%);
+  --prim-gray: hsl(227, 10%, 46%);
+  --neu-gray: hsl(0, 0%, 59%);
+
+  --white: #fff;
+  --gray: #ddd;
+}
+
+/* remove margins and apply box sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", Helvetica, sans-serif;
+  background-color: var(--prim-cyan);
+  font-size: 18px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* style background */
+
+.bg {
+  position: absolute;
+  width: 200%;
+  height: 150%;
+}
+
+.bg-top {
+  top: -160%;
+  left: -250%;
+  transform: translate(50%, 50%);
+  background: url(images/bg-pattern-top.svg) no-repeat right bottom;
+}
+
+.bg-bottom {
+  bottom: -175%;
+  right: -40%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  background: url(images/bg-pattern-bottom.svg) no-repeat left top;
+}
+
+/* style card */
+
+.card {
+  height: 375px;
+  width: 350px;
+  max-width: 90%;
+  background-color: var(--white);
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 100px 1px var(--prim-gray);
+  color: var(--prim-blue);
+}
+
+.card-top {
+  position: relative;
+  background: url(images/bg-pattern-card.svg) no-repeat center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 284px;
+  border-bottom: 1px solid var(--neu-gray);
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+}
+
+.user-details {
+  position: absolute;
+  top: 75%;
+  font-weight: 700;
+}
+
+.user-details span {
+  font-weight: 400;
+  color: var(--prim-gray);
+}
+
+.user-location {
+  position: absolute;
+  top: 85%;
+  color: var(--prim-gray);
+}
+
+.card-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90px;
+}
+
+.socials p {
+  text-align: center;
+  font-weight: 700;
+}
+
+.socials span {
+  margin-top: 0.25rem;
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--prim-gray);
+}
+
+/* style footer */
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+.attribution a:hover {
+  color: var(--white);
+}
+
+/* style mobile */
+
+@media only screen and (max-width: 425px) {
+  .bg-bottom {
+    bottom: -185%;
+    right: -40%;
+    width: 70%;
+    height: 160%;
+  }
+}
